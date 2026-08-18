@@ -1,0 +1,11 @@
+# Freeze
+
+
+freeze-chat: "<red>» Zostałeś/aś zamrożony/a! Wejdź pilnie na nasz Discord: <click:open_url:'https://discord.gg/lekoland'><yellow><underlined>discord.gg/lekoland</underlined></yellow></click>"
+
+freeze-actionbar: "<red>» Zostałeś/aś zamrożony/a – wejdź na Discorda!"
+
+permission: "skyrise.freeze"
+
+freeze-location: ""
+frozen-players: {}

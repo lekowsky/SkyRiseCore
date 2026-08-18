@@ -1,0 +1,10 @@
+# BatSpawn
+
+
+max-y: 40
+
+allowed-blocks:
+  - STONE
+  - DEEPSLATE
+
+deny-message: "<red>» Nietoperze mogą spawnować się tylko poniżej Y {max_y} na blokach stone/deepslate."

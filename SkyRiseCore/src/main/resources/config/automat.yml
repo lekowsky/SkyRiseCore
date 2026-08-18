@@ -1,0 +1,122 @@
+# Automat
+
+
+prefix: "<reset><#38f28f><bold>Automat <reset><gray>» <reset><white>"
+currency-symbol: "$"
+
+interact-cooldown-ms: 500
+
+nexo:
+  enabled: true
+  auto-register-furniture: true
+  allow-vanilla-blocks: true
+  furniture-mappings:
+    vending_machine: "default"
+
+sounds:
+  open: "UI_BUTTON_CLICK"
+  success: "ENTITY_PLAYER_LEVELUP"
+  fail: "ENTITY_VILLAGER_NO"
+  restock: "BLOCK_NOTE_BLOCK_PLING"
+
+particles:
+  enabled: true
+  type: "HAPPY_VILLAGER"
+  count: 10
+
+default-template:
+  rows: 5
+  title: "<reset><dark_gray>Automat"
+  fill-empty: false
+  filler-material: "BLACK_STAINED_GLASS_PANE"
+  filler-name: " "
+  border: false
+  border-material: "BLACK_STAINED_GLASS_PANE"
+  border-name: " "
+
+  close-button:
+    enabled: true
+    slot: -1
+    material: "BARRIER"
+    name: "<reset><red>Zamknij"
+    lore:
+      - "<reset><gray>Wróć do gry"
+
+stock:
+  defaults:
+    unlimited: true
+    max-stock: 64
+    initial-stock: 0
+
+  low-stock-warning:
+    enabled: true
+    threshold: 5
+    scan-interval: 5
+    notify-admins: true
+    log-to-console: true
+
+  display:
+    show-when-unlimited: true
+    show-numeric: true
+    sold-out-text: "<reset><red>Wyprzedane!"
+    available-text: "<reset><white>Dostępne: <reset><yellow>{amount} <reset><white>szt."
+    unlimited-text: "<reset><white>Dostępność: <reset><yellow>∞"
+
+auto-restock:
+  defaults:
+    enabled: false
+    interval: 30
+    amount: 10
+
+  min-interval: 1
+  max-interval: 1440
+  min-amount: 1
+  max-amount: 1000
+
+  notify-on-restock: true
+  broadcast-restock: false
+  broadcast-message: "<reset><#38f28f><bold>Automat <reset><gray>» <reset><white>Uzupełniono zapasy automatu <reset><yellow>{template}<reset><white>."
+
+protection:
+  allow-player-break: false
+  auto-cleanup: true
+  explosion-protection: true
+
+messages:
+  no-permission: "<reset><red>Brak uprawnień."
+  invalid: "<reset><red>Nieprawidłowa wartość."
+  cancelled: "<reset><red>Anulowano."
+
+  created: "<reset><white>Utworzono szablon <reset><yellow>{name}<reset><white>."
+  deleted: "<reset><red>Usunięto szablon <reset><yellow>{name}<reset><red>."
+  not-found: "<reset><red>Nie znaleziono szablonu <reset><yellow>{name}<reset><red>."
+  exists: "<reset><red>Szablon <reset><yellow>{name} <reset><red>już istnieje."
+
+  placed: "<reset><white>Postawiono automat <reset><gray>(<reset><yellow>{template}<reset><gray>)<reset><white>."
+  removed: "<reset><red>Usunięto automat."
+  placement-mode: "<reset><white>Tryb stawiania włączony! Kliknij <reset><yellow>PPM <reset><white>na blok lub furniture."
+  placement-cancelled: "<reset><red>Anulowano tryb stawiania."
+
+  purchase-success: "<reset><white>Kupiono <reset><yellow>{item} <reset><white>za <reset><yellow>{price}{currency}<reset><white>."
+  no-money: "<reset><red>Nie stać cię! Potrzebujesz <reset><yellow>{price}{currency}<reset><red>."
+  no-space: "<reset><red>Brak miejsca w ekwipunku."
+  limit-reached: "<reset><red>Osiągnięto limit zakupów dla tego przedmiotu."
+  disabled: "<reset><red>Ten automat jest wyłączony."
+  sold-out: "<reset><red>Ten produkt jest wyprzedany!"
+
+  stock-added: "<reset><white>Dodano <reset><yellow>{amount} <reset><white>sztuk do <reset><yellow>{item} <reset><gray>(stock: <reset><yellow>{stock}<reset><gray>)."
+  stock-removed: "<reset><red>Usunięto <reset><yellow>{amount} <reset><red>sztuk z <reset><yellow>{item} <reset><gray>(stock: <reset><yellow>{stock}<reset><gray>)."
+  stock-set: "<reset><white>Ustawiono stock <reset><yellow>{item} <reset><white>na <reset><yellow>{amount}<reset><white>."
+  stock-filled: "<reset><white>Wypełniono zapasy automatu <reset><yellow>{template}<reset><white> do maksimum."
+  stock-restocked: "<reset><white>Wykonano restock automatu <reset><yellow>{template} <reset><gray>(+<reset><yellow>{amount}<reset><gray> szt.)."
+  stock-low-warning: "<reset><red>⚠ Niski stock w automacie <reset><yellow>{template}<reset><red>: <reset><white>{item} <reset><gray>(<reset><yellow>{stock}<reset><gray>/<reset><yellow>{max}<reset><gray>) <reset><dark_gray>- {location}"
+  stock-empty: "<reset><red>⚠ Wyprzedano <reset><white>{item} <reset><red>w automacie <reset><yellow>{template}<reset><red>! <reset><dark_gray>- {location}"
+
+  item-added: "<reset><white>Dodano przedmiot do automatu."
+  item-removed: "<reset><red>Usunięto przedmiot z automatu."
+
+  reload: "<reset><white>Przeładowano konfigurację."
+
+  list-header: "<reset><white>Szablony automatów:"
+  list-entry: "<reset><yellow>{id}. <reset><white>{name} <reset><gray>(<reset><yellow>{rows}<reset><gray>r, <reset><yellow>{items} <reset><gray>items, <reset><yellow>{placements} <reset><gray>instancji)"
+  help-header: "<reset><white>Pomoc modułu automatów:"
