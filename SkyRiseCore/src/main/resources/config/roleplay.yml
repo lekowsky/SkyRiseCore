@@ -1,0 +1,19 @@
+# RolePlay
+
+
+rp-range: 20
+
+head-text-duration: 6
+
+formats:
+  me: "<color:#D15DFF>* {player} {message} *"
+
+  do: "<color:#5D9DFF>* {message} * ({player})"
+
+  try: "<color:#FFAC5D>* {player} próbuje {message}... {result} *"
+
+  try-success: "<green>[UDANE]</green>"
+  try-failure: "<red>[NIEUDANE]</red>"
+
+  opis: "<color:#FFEB5D>[OPIS] {message}"
+  opis2: "<color:#5DFFEB>[MIEJSCE] {message}"
